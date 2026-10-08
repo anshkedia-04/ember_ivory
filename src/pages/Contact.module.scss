@@ -1,0 +1,16 @@
+.contactPage { padding-top: 100px; }
+.hero { padding: 80px 0; text-align: center; border-bottom: 1px solid var(--color-border); }
+.content { padding: 100px 0; }
+.grid { display: grid; grid-template-columns: 1fr; gap: 80px; @media (min-width: 992px) { grid-template-columns: 1fr 1fr; } }
+.info { h2 { font-size: 2.5rem; margin-bottom: 40px; } }
+.locationList { display: flex; flex-direction: column; gap: 30px; margin-bottom: 50px; }
+.locCard { h3 { font-family: var(--font-body); font-size: 1.1rem; letter-spacing: 2px; color: var(--color-accent); margin-bottom: 10px; } p { color: var(--color-text-muted); line-height: 1.6; } .phone { color: var(--color-text); margin-top: 10px; } }
+.hours { h3 { font-family: var(--font-body); font-size: 1.1rem; letter-spacing: 2px; color: var(--color-accent); margin-bottom: 10px; text-transform: uppercase; } p { color: var(--color-text-muted); line-height: 1.6; } }
+
+.formWrapper { h2 { font-size: 2.5rem; margin-bottom: 40px; } }
+.form { display: flex; flex-direction: column; gap: 20px; }
+.inputGroup { 
+  input, select, textarea { width: 100%; background: transparent; border: 1px solid var(--color-border); padding: 15px; color: var(--color-text); font-family: var(--font-body); font-size: 1rem; border-radius: 4px; outline: none; transition: border-color 0.3s; &:focus { border-color: var(--color-accent); } }
+  select { appearance: none; background: var(--color-surface); }
+}
+.success { margin-top: 15px; color: #4ade80; }

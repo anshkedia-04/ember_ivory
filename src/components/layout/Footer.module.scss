@@ -1,0 +1,281 @@
+.footerWrapper {
+  background-color: var(--color-bg);
+  padding: 40px 0 50px;
+  position: relative;
+  width: 100%;
+}
+
+.footerContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* Rounded Rich Ember Terracotta Card */
+.footerCard {
+  background: linear-gradient(135deg, #c24b2b 0%, #b03e20 100%);
+  border-radius: clamp(24px, 3.5vw, 36px);
+  padding: clamp(35px, 5vw, 65px);
+  color: #fdfbf7; /* Warm Ivory text */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 25px 70px rgba(176, 62, 32, 0.25), 0 10px 30px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Top Header Row */
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: clamp(35px, 6vw, 70px);
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.brandTitle {
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  font-size: clamp(3.8rem, 13vw, 10.5rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.5px;
+  color: #ffffff; /* Crisp Ivory White against Ember */
+  text-transform: uppercase;
+  margin: 0;
+  user-select: none;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #fdfbf7;
+  max-width: 440px;
+  text-align: right;
+  margin: 0;
+  opacity: 0.95;
+
+  @media (max-width: 768px) {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+/* Middle 4-Column Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: clamp(40px, 5vw, 65px);
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    gap: 45px;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colTitle {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(253, 251, 247, 0.65);
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contactItem {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.contactSub {
+  font-size: 0.85rem;
+  color: rgba(253, 251, 247, 0.85);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+.hoursText {
+  font-size: 0.9rem;
+  color: rgba(253, 251, 247, 0.9);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.linkList, .socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.linkItem {
+  font-size: 0.92rem;
+  color: rgba(253, 251, 247, 0.9);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+
+  &:hover {
+    color: #ffffff;
+    transform: translateX(3px);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Column 4: Newsletter */
+.colNewsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletterText {
+  font-size: 0.9rem;
+  color: rgba(253, 251, 247, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.newsletterForm {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid #ffffff;
+  padding-bottom: 8px;
+  position: relative;
+  transition: border-color 0.3s ease;
+
+  &:focus-within {
+    border-bottom-color: #ffd27d;
+  }
+}
+
+.emailInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: #ffffff;
+  width: 100%;
+  padding-right: 15px;
+
+  &::placeholder {
+    color: rgba(253, 251, 247, 0.6);
+    font-style: italic;
+  }
+}
+
+.submitArrow {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: transform 0.25s ease, color 0.25s ease;
+
+  &:hover {
+    color: #ffd27d;
+    transform: translateX(4px);
+  }
+}
+
+.checkIcon {
+  color: #a7f3d0;
+}
+
+.consentText {
+  font-size: 0.72rem;
+  color: rgba(253, 251, 247, 0.65);
+  line-height: 1.45;
+  margin-top: 4px;
+}
+
+.subscribedMsg {
+  font-size: 0.82rem;
+  color: #ffd27d;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.78rem;
+  color: rgba(253, 251, 247, 0.75);
+  gap: 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.bottomLeft, .bottomRight {
+  color: rgba(253, 251, 247, 0.75);
+}
+
+.bottomCenter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: rgba(253, 251, 247, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.adminLink {
+  color: rgba(253, 251, 247, 0.75);
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s, color 0.2s;
+
+  &:hover {
+    opacity: 1;
+    color: #ffd27d;
+  }
+}
+
+.divider {
+  color: rgba(253, 251, 247, 0.35);
+}
